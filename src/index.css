@@ -1,0 +1,25 @@
+:root {
+  --main-bg-color: white;
+}
+
+main {
+  background-color: #E7E7E7;
+  height: 60vh;
+  width: 100vw;
+  display: grid;
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing:border-box;
+}
+
+.containter {
+  display: grid;
+  grid-template-rows: 1fr 6fr 4fr;
+  background-color: var(--main-bg-color)
+}
+
+
