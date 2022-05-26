@@ -1,0 +1,48 @@
+@media (min-width: 600px){
+    .form {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+.label {
+    text-align: right;
+}
+.input-form {
+    text-align: left;
+}
+
+
+select,input[type="number"],input[type="date"]{
+    border-radius: 5px;
+    width: 40vh;
+    
+}
+
+button {
+    background-color: green;
+    color: white;
+}
+
+.submit {
+    width: 100vw;
+    display: grid;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.submit input {
+    max-width: 200px;
+}
+
+button {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.form input,select{
+    max-width: 200px;
+}
+

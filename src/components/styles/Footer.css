@@ -1,0 +1,9 @@
+footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-content: center;
+}
+
+footer div{
+    text-align: center;
+}
