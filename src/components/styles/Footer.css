@@ -1,9 +1,8 @@
-footer {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    justify-content: center;
+h1 {
+    color: black;
 }
 
-footer div{
-    text-align: center;
+footer {
+    background: blue;
+    width: 1000px;
 }

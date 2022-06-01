@@ -5,6 +5,7 @@ header{
     flex-wrap: wrap;
     width: 100vw;
     justify-content: space-between;
+    background-color:white;
 }
 
 header div {
@@ -34,7 +35,12 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-    border-bottom: solid green;
+    border-bottom: solid #00B050;
+    overflow:hidden;
+}
+
+header nav ul li:active {
+    border-bottom: solid #00B050;
     overflow:hidden;
 }
 
@@ -50,4 +56,15 @@ header nav ul li:hover {
     .brand {
         margin-left: 5%;
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:active {
+    text-decoration: none;
+    color: black;
+    border-bottom: solid #00B050;
 }

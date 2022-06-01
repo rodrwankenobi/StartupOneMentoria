@@ -1,0 +1,31 @@
+h1 {
+    color:#00B050;
+}
+
+.img-about {
+    width: 30vw;
+}
+@media(min-width: 500px){
+    .image-about {
+        padding: 20px;
+        width: 30vw;
+    }
+}
+
+@media(min-width: 500px){
+    .text-about {
+        width: 30vw;
+    }
+}
+
+@media(min-width: 500px){
+    #about {
+        background-color: #E7E7E7;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+p {
+    text-decoration: none;
+}

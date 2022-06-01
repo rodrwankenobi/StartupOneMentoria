@@ -1,6 +1,6 @@
 import './styles/Form.css'
 
-function Form(){
+const Form = () => {
     return (
     <main>
         <div class="form">
@@ -77,8 +77,8 @@ function Form(){
                 <button>Gerar Trilha</button>
         </section>
     </main>
-    )
+    );
 
-}
+};
 
 export default Form;
