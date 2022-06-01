@@ -1,0 +1,99 @@
+.login-form {
+  background-color: #E7E7E7;
+  width: 40vw;
+  height: 30vw;
+  border: solid 1px black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media(min-width:400px){
+  .login{
+  background-image: url("https://img.freepik.com/vetores-gratis/fundo-abstrato-da-curva-verde_53876-99569.jpg");
+  background-size: cover;
+  display: flex;
+  weight: 100vw;
+  height: 100vh;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-content: center;
+}
+}
+@media(max-width:400px){
+  .login{
+    background-image: url("https://img.freepik.com/vetores-gratis/fundo-abstrato-da-curva-verde_53876-99569.jpg");
+    background-size: cover;
+    display: block;
+  }
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.controle-login{
+  text-align: center;
+  margin: 20px;
+}
+button {
+  background: #00B050;
+  color: white;
+  width: 70%;
+  height: 30px;
+  margin: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.botao-login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+label {
+  display: block;
+}
+
+img {
+  width: 200px;
+}
+.logo {
+  width: 320px;
+  text-align: left;
+
+}
+span{
+  text-align: center;
+}
+
+input {
+  border-radius: 5px;
+  height: 20px;
+  width: 70%;
+}
+
+body {
+  font-family:"Franklin Gothic Medium";
+  margin: 0px;
+  padding: 0px;
+  box-sizing:border-box;
+}
+
+.presentation {
+  width: 50vw;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+.presentation-text {
+  width: 320px;
+  font-size: 41px;
+  text-align: left;
+}

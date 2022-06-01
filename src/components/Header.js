@@ -13,7 +13,9 @@ function Header(){
                         Encontre um Mentor
                     </li>
                     <li>
-                        Trilhas de Aprendizado
+                        <a href="/">
+                            Trilhas de Aprendizado
+                        </a>
                     </li>
                     <li>
                         Para Empresas
@@ -22,7 +24,14 @@ function Header(){
                         Contato
                     </li>
                     <li>
-                        Sobre Nós
+                        <a href="/about">
+                            Sobre Nós
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/login">
+                            Login
+                        </a>
                     </li>
                 </ul>
             </nav>

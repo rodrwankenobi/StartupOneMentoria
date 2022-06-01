@@ -16,13 +16,15 @@
 
 select,input[type="number"],input[type="date"]{
     border-radius: 5px;
+    border: solid transparent;
     width: 40vh;
     
 }
 
 button {
-    background-color: green;
+    background-color: #00B050;
     color: white;
+    width:200px;
 }
 
 .submit {
@@ -35,6 +37,7 @@ button {
 
 .submit input {
     max-width: 200px;
+    height: 25px;
 }
 
 button {
@@ -44,5 +47,16 @@ button {
 
 .form input,select{
     max-width: 200px;
+    height: 25px;
 }
 
+label {
+    margin-right: 5px;
+}
+
+.controle label{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    height: 25px;
+}
