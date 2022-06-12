@@ -1,6 +1,6 @@
 
 header{
-    padding: 10px;
+
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
@@ -22,7 +22,7 @@ header nav {
 header nav ul {
     display: flex;
     align-content: center;
-    padding: 30px;
+
 }
 
 header nav ul li {

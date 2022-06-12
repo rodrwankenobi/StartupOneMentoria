@@ -1,62 +1,115 @@
-@media (min-width: 600px){
+@media (min-width: 800px){
     .form {
         width: 100vw;
         display: grid;
         grid-template-columns: 2fr 2fr;
+        background-color: #E7E7E7;
+    }
+}
+@media (max-width: 800px){
+    .form {
+        display: flex;
+        flex-direction: column;
+        background-color: #E7E7E7;
     }
 }
 
-.label {
-    text-align: right;
-}
-.input-form {
-    text-align: left;
-}
 
-
-select,input[type="number"],input[type="date"]{
-    border-radius: 5px;
-    border: solid transparent;
-    width: 40vh;
-    
-}
-
-button {
+.button-form {
     background-color: #00B050;
     color: white;
     width:200px;
-}
-
-.submit {
-    width: 100vw;
-    display: grid;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
-}
-
-.submit input {
-    max-width: 200px;
-    height: 25px;
-}
-
-button {
-    margin: 10px;
+    height: 30px;
     border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.form input,select{
-    max-width: 200px;
-    height: 25px;
+
+.btn-gerar-trilha {
+    border-radius: 5px;
+    width: 200px;
 }
 
-label {
+
+.label-trilha {
+    display: flex;
+    color: solid black;
+    align-self: center;
     margin-right: 5px;
 }
 
-.controle label{
-    display: flex;
-    justify-content: right;
-    align-content: center;
-    height: 25px;
+.input-form{
+    border-radius: 5px;
+    width:300px;
+    height: 30px;
 }
+
+.number-form{
+    border-radius: 5px;
+    width:290px;
+    height: 30px;
+}
+
+
+.date-form{
+    border-radius: 5px;
+    width:290px;
+    height: 30px;
+}
+
+.select-form{
+    border-radius: 5px;
+    width:300px;
+    height: 30px;
+}
+
+.submit-form {
+    display: flex;
+    justify-content: center;
+    background-color: #E7E7E7;
+}
+
+@media (min-width: 800px){
+    .controle-form-left{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 800px){
+    .controle-form-right{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding: 10px;
+    }
+}
+@media (max-width: 800px){
+    .controle-form-left{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 800px){
+    .controle-form-right{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding: 10px;
+    }
+}
+
+.div-label{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.solicitacao-mentoria{
+    display: flex;
+    text-align: center;
+    border: solid black;
+}
+
