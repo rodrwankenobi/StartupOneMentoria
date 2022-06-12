@@ -1,31 +1,30 @@
-h1 {
-    color:#00B050;
-}
 
-.img-about {
-    width: 30vw;
-}
-@media(min-width: 500px){
-    .image-about {
-        padding: 20px;
-        width: 30vw;
-    }
-}
-
-@media(min-width: 500px){
-    .text-about {
-        width: 30vw;
-    }
-}
 
 @media(min-width: 500px){
     #about {
+        width: 100vw;
         background-color: #E7E7E7;
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+    }
+}
+@media(max-width: 500px){
+    #about {
+        width: 100vw;
+        background-color: #E7E7E7;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 30px;
     }
 }
 
 p {
     text-decoration: none;
+}
+
+.paragraph-about{
+    padding: 10px;
 }

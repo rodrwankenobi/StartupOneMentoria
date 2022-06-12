@@ -1,84 +1,139 @@
 import './styles/Form.css'
+import { useState } from 'react';
+import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import Trilha from './Trilha'
+import { useNavigate } from 'react-router-dom'
 
-const Form = () => {
+const handleSubmit = text => event => {
+    console.log('click');
     return (
-    <main>
-        <div class="form">
-            <div class="controle">
-                <div class="label">
-                    <label for="cargo_atual">Cargo Atual:</label>
-                </div>
-                <div class="input-form">
-                    <select name="cargo_atual">
-                        <option value="0">Engenheiro de Dados</option>
-                        <option value="1">Cientista de Dados</option>
-                    </select>
-                </div>
+        render(<Trilha/>)
+        
+        )
+    }
+    
+class FormTrilha extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render(){
+        return (
+            <>
+            <div class="form">
+                    <div class="controle-form-left">
+                        <div class="div-label">
+                            <label class="label-trilha" for="cargo_atual">Cargo Atual:</label>
+                        </div>
+                        <div>
+                            <select class="select-form" name="cargo_atual" value={this.cargoAtual} onChange={e => this.cargoAtual=e.target.options[e.target.value].text}>
+                                <option value="0">Engenheiro de Dados</option>
+                                <option value="1">Cientista de Dados</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controle-form-right">
+                        <div class="div-label">
+                            <label class="label-trilha" for="objetivo">Objetivo:</label>
+                        </div>
+                        <div>
+                            <select class="select-form" name="objetivo" onChange={e => this.cargoDesejado=e.target.options[e.target.value].text}>
+                                <option value="0">Engenheiro de Dados</option>
+                                <option value="1">Cientista de Dados</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controle-form-left">
+                        <div class="div-label">
+                            <label class="label-trilha"  for="nivel_atual">Nível Atual:</label>
+                        </div>
+                        <div>
+                            <select class="select-form" name="nivel_atual" onChange={e => this.nivelAtual=e.target.options[e.target.value].text}>
+                                <option value="0">Júnior</option>
+                                <option value="1">Pleno</option>
+                                <option value="2">Sênior</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controle-form-right">
+                        <div class="div-label">
+                            <label class="label-trilha" for="nivel_desejado">Nível Desejado:</label>
+                        </div>
+                        <div>
+                            <select class="select-form" name="nivel_desejado" onChange={e => this.nivelDesejado=e.target.options[e.target.value].text}>
+                                <option value="0">Júnior</option>
+                                <option value="1">Pleno</option>
+                                <option value="2">Sênior</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controle-form-left">
+                        <div class="div-label">
+                            <label class="label-trilha" for="salario_atual">Salário Atual:</label>
+                        </div>
+                        <div>
+                            <input class="number-form"  name="salario_atual" type="number" onChange={e => this.salarioAtual=e.target.value} />
+                        </div>
+                    </div>
+                    <div class="controle-form-right">
+                        <div class="div-label">
+                            <label class="label-trilha" for="salario_desejado">Salário Desejado:</label>
+                        </div>
+                        <div>
+                            <input class="number-form"  name="salario_desejado" type="number" value={this.salarioDesejado} onchange={e => this.salarioDesejado=e.target.value} />
+                        </div>
+                    </div>
+                    <div class="controle-form-left">
+                        <div class="div-label">
+                            <label class="label-trilha" for="data_inicial">Data Inicial:</label>
+                        </div>
+                        <div>
+                            <input class="date-form"  name="data_inicial" type="date" value={this.dataInicial} onchange={e => this.dataInicial=e.target.value} />
+                        </div>
+                    </div>
+                    <div class="controle-form-right">
+                        <div class="div-label">
+                            <label class="label-trilha" for="data_final">Data Final:</label>
+                        </div>
+                        <div>
+                            <input class="date-form"  name="data-final" type="date" value={this.dataFinal} onchange={e => this.dataFinal=e.target.value} />
+                        </div>
+                    </div>                      
             </div>
-            <div class="controle">
-                <div class="label">
-                    <label for="objetivo">Objetivo:</label>
-                </div>
-                <div class="input-form">
-                    <select name="objetivo">
-                        <option value="0">Engenheiro de Dados</option>
-                        <option value="1">Cientista de Dados</option>
-                    </select>
-                </div>
-            </div>
-            <div class="controle">
-                <div class="label">
-                    <label for="nivel_atual">Nível Atual:</label>
-                </div>
-                <div class="input-form">
-                    <select name="nivel_atual">
-                        <option value="0">Júnior</option>
-                        <option value="1">Pleno</option>
-                        <option value="2">Sênior</option>
-                    </select>
-                </div>
-            </div>
-            <div class="controle">
-                <div class="label">
-                    <label for="nivel_desejado">Nível Desejado:</label>
-                </div>
-                <div class="input-form">
-                    <select name="nivel_atual">
-                        <option value="0">Júnior</option>
-                        <option value="1">Pleno</option>
-                        <option value="2">Sênior</option>
-                    </select>
-                </div>
-            </div>
-            <div class="controle">
-                <div class="label">
-                    <label for="salario_atual">Salário Atual:</label>
-                </div>
-                <div class="input-form">
-                    <input type="number"/>
-                </div>
-            </div>
-            <div class="controle">
-                <div class="label">
-                    <label for="selario_desejado">Salário Desejado:</label>
-                </div>
-                <div class="input-form">
-                    <input type="number"/>
-                </div>
-            </div>
-        </div>
-        <section class="submit">
-                <div>
-                    <label for="prazo">Prazo:</label>
-                </div>
-                <div>
-                    <input type="date" name="prazo"/>
-                </div>
-                <button>Gerar Trilha</button>
-        </section>
-    </main>
-    );
+                    <div class="submit-form">
+                        <button class="button-form" onClick={this.props.handler}>Gerar Trilha</button>
+                    </div>
+            </>
+        );
+    }
+}
 
+class Form extends React.Component{
+    constructor(props){
+        super(props);
+        this.stateTrilha = false;
+        this.handler = this.handler.bind(this)
+        console.log(this.stateTrilha);
+    }
+    handler() {
+      this.stateTrilha = true;
+      console.log(this.stateTrilha);
+      this.forceUpdate();
+    }
+    render(){
+        return (
+            <>
+                <Header />
+                {this.stateTrilha ? (
+                    <Trilha stateTrilha />
+                    ): (
+                        <FormTrilha handler = {this.handler}/>
+                    )}
+                <Footer />
+            </>
+        );
+    }
 };
 
 export default Form;

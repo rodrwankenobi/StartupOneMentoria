@@ -1,0 +1,60 @@
+.button-cadastro {
+    background: #00B050;
+    color: white;
+    width: 70%;
+    height: 30px;
+    margin: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .input-cadastro {
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+  }
+
+
+  .controle-cadastro {
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 300px;
+  }
+
+  .select-cadastro {
+    width: 210px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .label-cadastro {
+    justify-self: right;
+  }
+  .cadastro {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: #E7E7E7;
+    border-radius: 5px;
+  }
+  .submit {
+    text-align: center;
+    width: 300px;
+  }
+  div .label-cadastro{
+    text-align: right;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    text-align: center;
+    display: block;
+  }

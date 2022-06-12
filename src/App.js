@@ -1,30 +1,16 @@
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
+import {React} from 'react';
 import './App.css';
-import React, { Component } from 'react';
-import Header from './components/Header'
-import Form from './components/Form'
-import About from './components/About'
-import Footer from './components/Footer'
-import Login from './components/Login'
-/*import Routes from './routes'*/
+import MainRoutes from './routes';
+import {AuthProvider} from './providers/auth'
 
-import {
-  Routes,Route, Router,BrowserRouter
-} from 'react-router-dom'
-
-function App() {
+export default function App() {
   return (
-      <div class="container">
-          <Header/>
-          <BrowserRouter>
-          <Routes>
-              <Route path="/" element={<Form />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/login" element={<Login />} />
-          </Routes>
-          </BrowserRouter>
-          <Footer />
-      </div>
-  );
+      <AuthProvider>
+        <div class="container">
+          <MainRoutes />
+        </div>
+      </AuthProvider>
+    )
 }
-
-export default App;

@@ -1,25 +1,23 @@
-:root {
-    --main-bg-color: white;
-}
+
 
 main {
     background-color: #E7E7E7;
     height: 60vh;
     width: 100vw;
-    display: grid;
 }
 
 
 body {
     margin: 0px;
     padding: 0px;
-    font-family:"Franklin Gothic Medium";
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
 }
 
 .containter {
     display: grid;
     grid-template-rows: 1fr 6fr 4fr;
-    background-color: var(--main-bg-color)
+    justify-content: left;
 }
 
 .controle {
@@ -27,3 +25,4 @@ body {
     grid-template-columns: 2fr 2fr;
     padding: 10px;
 }
+
