@@ -54,8 +54,10 @@ class Mentores extends React.Component {
 
 function renderDetail(props) {
   const { Picture, Notes, Nome } = props.data;
-  const solicitarMentoria = (nome) => {
-    alert("Sua solicitação de mentoria para ${nome} foi enviada. Por favor aguarde o retorno do mentor.");
+  const solicitarMentoria = (event,nome) => {
+    event.preventDefault();
+    console.log(nome);
+    alert(`Sua solicitação de mentoria para ${nome} foi enviada. Por favor aguarde o retorno do mentor.`);
   }
   return (
     <div className="employee-info">
@@ -66,7 +68,7 @@ function renderDetail(props) {
           <p className="employee-notes">{Notes}</p>
         </div>
         <textarea class='text-solicitar-mentoria' placeholder="Digite uma mensagem"></textarea>
-        <button class="btn-solicitar-mentoria">Solicitar Mentoria</button>
+        <button class="btn-solicitar-mentoria" onClick={e => solicitarMentoria(e,Nome)}>Solicitar Mentoria</button>
       </div>
     </div>
   );

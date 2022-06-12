@@ -29,7 +29,6 @@ function Login() {
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: result => {
                 handleLogin(true);
-                window.location.href = "/";
             },
             onFailure: err => {
                 handleLogin(false);
@@ -59,10 +58,9 @@ function Login() {
                     <div class="controle-login">
                         <label class="label-login"  for="password">Senha</label>
                         <input type="password" class="input-login" name="password" value={password}  onChange={(e) => setPassword(e.target.value)}/>
-                        <a href="/cadastro"><p>Não possui conta? Clique aqui.</p> </a>       
                     </div>
-                    <div class="botao-login">
-                        <button class="btn-login">Entrar</button>
+                    <div class="botao-login">       
+                        <button class="btn-login" onClick={onSubmit}>Entrar</button>
                     </div>
                     </form>
                 </div>
