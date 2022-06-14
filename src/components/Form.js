@@ -1,10 +1,8 @@
 import './styles/Form.css'
-import { useState } from 'react';
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Trilha from './Trilha'
-import { useNavigate } from 'react-router-dom'
 
 const handleSubmit = text => event => {
     console.log('click');

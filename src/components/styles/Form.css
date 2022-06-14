@@ -82,14 +82,14 @@
 @media (min-width: 800px){
     .controle-form-right{
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 2.5fr;
         padding: 10px;
     }
 }
 @media (max-width: 800px){
     .controle-form-left{
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 2.5fr;
         padding: 10px;
     }
 }
@@ -97,7 +97,7 @@
 @media (max-width: 800px){
     .controle-form-right{
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 2.4fr;
         padding: 10px;
     }
 }
@@ -112,4 +112,3 @@
     text-align: center;
     border: solid black;
 }
-
