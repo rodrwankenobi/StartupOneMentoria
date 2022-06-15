@@ -1,11 +1,11 @@
 import './styles/Form.css'
+import { useState } from 'react'
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Trilha from './Trilha'
 
 const handleSubmit = text => event => {
-    console.log('click');
     return (
         render(<Trilha/>)
         
@@ -15,6 +15,9 @@ const handleSubmit = text => event => {
 class FormTrilha extends React.Component {
     constructor(props) {
         super(props);
+        this.cargoDesejado='Engenheiro de Dados';
+        this.dataInicial=new Date(2022,5,15);
+        this.dataFinal=new Date(2022,7,16);
     }
     render(){
         return (
@@ -25,7 +28,7 @@ class FormTrilha extends React.Component {
                             <label class="label-trilha" for="cargo_atual">Cargo Atual:</label>
                         </div>
                         <div>
-                            <select class="select-form" name="cargo_atual" value={this.cargoAtual} onChange={e => this.cargoAtual=e.target.options[e.target.value].text}>
+                            <select class="select-form" name="cargo_atual" onChange={e => this.cargoAtual=e.target.options[e.target.value].text}>
                                 <option value="0">Engenheiro de Dados</option>
                                 <option value="1">Cientista de Dados</option>
                             </select>
@@ -79,7 +82,7 @@ class FormTrilha extends React.Component {
                             <label class="label-trilha" for="salario_desejado">Salário Desejado:</label>
                         </div>
                         <div>
-                            <input class="number-form"  name="salario_desejado" type="number" value={this.salarioDesejado} onchange={e => this.salarioDesejado=e.target.value} />
+                            <input class="number-form"  name="salario_desejado" type="number" value={this.salarioDesejado} onChange={e => this.salarioDesejado=e.target.value} />
                         </div>
                     </div>
                     <div class="controle-form-left">
@@ -87,7 +90,7 @@ class FormTrilha extends React.Component {
                             <label class="label-trilha" for="data_inicial">Data Inicial:</label>
                         </div>
                         <div>
-                            <input class="date-form"  name="data_inicial" type="date" value={this.dataInicial} onchange={e => this.dataInicial=e.target.value} />
+                            <input class="date-form"  name="data_inicial" type="date" onChange={e => this.dataInicial=e.target.value} />
                         </div>
                     </div>
                     <div class="controle-form-right">
@@ -95,12 +98,12 @@ class FormTrilha extends React.Component {
                             <label class="label-trilha" for="data_final">Data Final:</label>
                         </div>
                         <div>
-                            <input class="date-form"  name="data-final" type="date" value={this.dataFinal} onchange={e => this.dataFinal=e.target.value} />
+                            <input class="date-form"  name="data-final" type="date" onChange={e => this.dataFinal=e.target.value} />
                         </div>
                     </div>                      
             </div>
                     <div class="submit-form">
-                        <button class="button-form" onClick={this.props.handler}>Gerar Trilha</button>
+                        <button class="button-form" onClick={e => this.props.handler(e,this.cargoDesejado,this.dataInicial, this.dataFinal)}>Gerar Trilha</button>
                     </div>
             </>
         );
@@ -112,11 +115,16 @@ class Form extends React.Component{
         super(props);
         this.stateTrilha = false;
         this.handler = this.handler.bind(this)
-        console.log(this.stateTrilha);
     }
-    handler() {
+    handler(event,cargoDesejado,dataInicial,dataFinal) {
+      event.preventDefault();
+      console.log('intervalo 1',dataInicial,dataFinal);
+      this.cargoDesejado = cargoDesejado;
+      this.dataInicial = dataInicial;
+      this.dataFinal = dataFinal;
+      console.log(this.cargoDesejado);
       this.stateTrilha = true;
-      console.log(this.stateTrilha);
+
       this.forceUpdate();
     }
     render(){
@@ -124,9 +132,14 @@ class Form extends React.Component{
             <>
                 <Header />
                 {this.stateTrilha ? (
-                    <Trilha stateTrilha />
+                    <Trilha 
+                        stateTrilha 
+                        cargoDesejado={this.cargoDesejado}
+                        dataInicial={this.dataInicial}
+                        dataFinal={this.dataFinal}
+                    />
                     ): (
-                        <FormTrilha handler = {this.handler}/>
+                        <FormTrilha handler = {this.handler} />
                     )}
                 <Footer />
             </>
