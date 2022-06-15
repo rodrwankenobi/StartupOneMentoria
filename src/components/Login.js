@@ -1,5 +1,5 @@
 import './styles/Login.css'
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js'
 import UserPool from './UserPool';
 import { MyContext } from '../providers/auth';
@@ -8,7 +8,6 @@ import logo from '../../public/img/mentoria.jpg'
 function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const {token, handleLogin} = useContext(MyContext);
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -28,11 +27,11 @@ function Login() {
 
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: result => {
-                handleLogin(true);
+                localStorage.setItem('isAuthenticated',true);
                 window.location.href = "/";
             },
             onFailure: err => {
-                handleLogin(false);
+                localStorage.setItem('isAuthenticated',false);
                 alert('Erro no login, tente novamente')
             }
         });
@@ -59,11 +58,12 @@ function Login() {
                     <div class="controle-login">
                         <label class="label-login"  for="password">Senha</label>
                         <input type="password" class="input-login" name="password" value={password}  onChange={(e) => setPassword(e.target.value)}/>
-                        <a href="/cadastro"><p>Não possui conta? Clique aqui.</p> </a>       
                     </div>
-                    <div class="botao-login">
-                        <button class="btn-login">Entrar</button>
+                    <div class="botao-login">       
+                        <button class="btn-login" onClick={onSubmit}>Entrar</button>
                     </div>
+                        <a href="/cadastro"><p align="center">Não possui cadastro? Clique aqui.</p></a>
+                        <a href="/recuperarsenha"><p align="center">Esqueci minha senha</p></a>
                     </form>
                 </div>
             </div>
