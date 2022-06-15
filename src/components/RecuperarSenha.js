@@ -1,6 +1,6 @@
 import './styles/Cadastro.css'
 import React, {useState} from 'react';
-import logo from '../../public/img/mentoria.jpg'
+import logo from '../img/mentoria.jpg'
 
 const recuperarSenha = (event,email) => {
     event.preventDefault();

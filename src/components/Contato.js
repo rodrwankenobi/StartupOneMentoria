@@ -1,4 +1,3 @@
-import { Divider } from "@aws-amplify/ui-react";
 import "./styles/Contato.css";
 import Footer from "./Footer"
 import Header from "./Header"

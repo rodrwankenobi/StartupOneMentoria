@@ -2,8 +2,7 @@ import './styles/Login.css'
 import { useState, useContext } from 'react'
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js'
 import UserPool from './UserPool';
-import { MyContext } from '../providers/auth';
-import logo from '../../public/img/mentoria.jpg'
+import logo from '../img/mentoria.jpg'
 
 function Login() {
     const [email, setEmail] = useState();
