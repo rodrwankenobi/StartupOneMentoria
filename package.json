@@ -10,6 +10,8 @@
     "amazon-cognito-identity-js": "^5.2.9",
     "aws-amplify": "^4.3.24",
     "aws-amplify-react": "^5.1.9",
+    "devextreme": "^21.2.4",
+    "devextreme-react": "^21.2.4",
     "faker": "^5.5.3",
     "react": "^18.1.0",
     "react-data-grid": "^7.0.0-beta.13",
@@ -17,9 +19,7 @@
     "react-google-charts": "^4.0.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "devextreme": "^21.2.4",
-    "devextreme-react": "^21.2.4"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,5 +47,8 @@
   },
   "devDependencies": {
     "devextreme-themebuilder": "^21.2.4"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
