@@ -3,7 +3,6 @@ import 'devextreme/dist/css/dx.light.css';
 import React from 'react';
 import './App.css';
 import MainRoutes from './routes';
-import {AuthProvider} from './providers/auth'
 
 class App extends React.Component {
   constructor(props) {
