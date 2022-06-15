@@ -9,8 +9,6 @@ import Mentores from "./components/Mentores"
 import RecuperarSenha from "./components/RecuperarSenha"
 import ParaEmpresas from "./components/ParaEmpresas"
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import { AuthProvider } from "./providers/auth"
-import { MyContext } from "./providers/auth"
 
 export const PrivateRoute = function({ component: Component, ...rest }, props) {
   const isAuthenticated = rest.myToken == 'true' ? true : false;
