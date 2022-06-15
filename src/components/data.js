@@ -1,7 +1,7 @@
-import rodrigo from '../../public/img/rodrigo.jpg'
-import gabriele from '../../public/img/gabriele.jpg'
-import marco from '../../public/img/marco.jpg'
-import ericsson from '../../public/img/ericsson.jpg'
+import rodrigo from '../img/rodrigo.jpg'
+import gabriele from '../img/gabriele.jpg'
+import marco from '../img/marco.jpg'
+import ericsson from '../img/ericsson.jpg'
 
 
 

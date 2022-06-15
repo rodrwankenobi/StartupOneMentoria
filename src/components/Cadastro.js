@@ -1,6 +1,6 @@
 import './styles/Cadastro.css'
 import React from 'react';
-import logo from '../../public/img/mentoria.jpg'
+import logo from '../img/mentoria.jpg'
 
 function Cadastro(){
     return (
