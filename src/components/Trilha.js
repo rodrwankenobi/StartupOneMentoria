@@ -16,12 +16,14 @@ const columns = [
 class Trilha extends React.Component{
     constructor(props){
         super(props);
-        this.props.cargoDesejado == 'Cientista de Dados' ? (this.rows = rows_cientista_dados) : (this.rows = rows_engenheiro_dados);
+        this.props.cargoDesejado === 'Cientista de Dados' ? (this.rows = rows_cientista_dados) : (this.rows = rows_engenheiro_dados);
         this.preencherDatas();
         this.data = [columns, ...this.rows];
     }
     
     preencherDatas(){
+        console.log('tipo da data -> ',typeof(this.props.dataFinal));
+        console.log('tipo da data -> ',typeof(this.props.dataInicial));
         console.log('data inicial: ',this.props.dataInicial,'data final: ',this.props.dataFinal);
         const datas = this.splitDateIntoEqualIntervals(this.props.dataInicial,this.props.dataFinal,this.rows.length);
         datas.unshift(this.props.dataInicial);
@@ -35,7 +37,7 @@ class Trilha extends React.Component{
         }
     }
     splitDateIntoEqualIntervals(startDate, endData, numberOfIntervals){
-        let diff =  endData.getTime() - startDate.getTime();
+        let diff =  new Date(endData).getTime() - new Date(startDate).getTime();
         let intervalLength = diff/numberOfIntervals;
         let intervals = [];
         for(let i = 1 ; i <= numberOfIntervals;i++)

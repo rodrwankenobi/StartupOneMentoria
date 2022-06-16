@@ -1,5 +1,4 @@
 import React from "react";
-import { useContext, useState } from 'react';
 import Form from "./components/Form";
 import About from "./components/About"
 import Cadastro from "./components/Cadastro"
@@ -11,7 +10,7 @@ import ParaEmpresas from "./components/ParaEmpresas"
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 export const PrivateRoute = function({ component: Component, ...rest }, props) {
-  const isAuthenticated = rest.myToken == 'true' ? true : false;
+  const isAuthenticated = rest.myToken === 'true' ? true : false;
   return (
     <Route
     {...rest}

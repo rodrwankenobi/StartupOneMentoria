@@ -1,5 +1,5 @@
 import './styles/Login.css'
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js'
 import UserPool from './UserPool';
 import logo from '../img/mentoria.jpg'
