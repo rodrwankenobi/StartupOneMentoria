@@ -1,7 +1,10 @@
 const rows_cientista_dados = [
-    ["Programação", "Hadoop", new Date(2022, 6, 8), new Date(2022, 8, 6), "Sugestão: Khan Academy"],
-    ["Programação", "Python", new Date(2022, 8, 7), new Date(2022, 10, 4), "Sugestão: Alura"],
-    ["Programação", "SQL", new Date(2022, 10, 5), new Date(2022, 12, 4), "Sugestão: Coursera"],
+  ["Matemática", "Estatística", new Date(), new Date(), "Sugestão: Khan Academy"],
+  ["Programação", "SQL", new Date(), new Date(), "Sugestão: Alura"],
+  ["Programação", "Hadoop", new Date(), new Date(), "Sugestão: Data Science Academy"],
+  ["Programação", "NoSQL", new Date(), new Date(), "Sugestão: Udemy"],
+  ["Programação", "Arquitetura de Dados", new Date(), new Date(), "Sugestão: FIAP"],
+  ["Computação em Nuvem", "AWS", new Date(), new Date(), "Udemy"]
   ];
 
   export default rows_cientista_dados;

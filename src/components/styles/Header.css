@@ -34,15 +34,7 @@ header nav ul li {
     border-bottom: 5px solid transparent;
 }
 
-header nav ul li:hover {
-    border-bottom: solid #00B050;
-    overflow:hidden;
-}
 
-header nav ul li:active {
-    border-bottom: solid #00B050;
-    overflow:hidden;
-}
 
 @media(max-width: 600px){
     .brand {
@@ -63,8 +55,19 @@ a {
     color: black;
 }
 
-li a:active {
+ul a:hover {
     text-decoration: none;
     color: black;
     border-bottom: solid #00B050;
+}
+
+ul a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: solid transparent;
+}
+
+nav {
+    padding-right: 5px;
 }

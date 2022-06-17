@@ -1,7 +1,13 @@
 const rows_cientista_dados = [
-    ["Matemática", "Estatística", new Date(2022, 6, 8), new Date(2022, 8, 6), "Sugestão: Khan Academy"],
-    ["Programação", "Python", new Date(2022, 8, 7), new Date(2022, 10, 4), "Sugestão: Alura"],
-    ["Data Science", "Aprendizado Supervisionado", new Date(2022, 10, 5), new Date(2022, 12, 4), "Sugestão: Coursera"],
+    ["Matemática", "Álgebra Básica", new Date(), new Date(), "Sugestão: Khan Academy"],
+    ["Matemática", "Álgebra Linear", new Date(), new Date(), "Sugestão: Khan Academy"],
+    ["Matemática", "Estatística", new Date(), new Date(), "Sugestão: Khan Academy"],
+    ["Programação", "Python", new Date(), new Date(), "Sugestão: Alura"],
+    ["Programação", "R", new Date(), new Date(), "Sugestão: Alura"],
+    ["Machine Learning", "Aprendizado Supervisionado", new Date(), new Date(), "Sugestão: Coursera"],
+    ["Machine Learning", "Aprendizado Não Supervisionado", new Date(), new Date(), "Sugestão: Coursera"],
+    ["Machine Learning", "Deep Learning", new Date(), new Date(), "Kaggle"],
+    ["Computação em Nuvem", "AWS", new Date(), new Date(), "Udemy"]
   ];
 
   export default rows_cientista_dados;

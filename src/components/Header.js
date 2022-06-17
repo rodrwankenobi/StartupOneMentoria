@@ -10,31 +10,31 @@ function Header(){
             <div>
                 <nav>
                     <ul>
+                        <a href="/mentores">
                         <li>
-                            <a href="/mentores">
                                 Encontre um Mentor
-                            </a>
                         </li>
+                        </a>
+                        <a href="/">
                         <li>
-                            <a href="/">
                                 Trilhas de Aprendizado
-                            </a>
                         </li>
+                        </a>
+                        <a href="/paraempresas">
                         <li>
-                            <a href="/paraempresas">
                                 Para Empresas
-                            </a>
                         </li>
+                        </a>
+                        <a href="/contato">
                         <li>
-                            <a href="/contato">
                                 Contato
-                            </a>
                         </li>
+                        </a>
+                        <a href="/about">
                         <li>
-                            <a href="/about">
                                 Sobre Nós
-                            </a>
                         </li>
+                        </a>
                     </ul>
                 </nav>
             </div>

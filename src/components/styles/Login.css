@@ -1,19 +1,34 @@
-.login{
-  background-image: url("../../img/background-login.jpg");
-  background-size: cover;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  flex-wrap: wrap; 
-  justify-content: center;
-  align-content: center;
+@media(min-width: 450px){
+  .login{
+    background-image: url("../../img/background-login.jpg");
+    background-size: cover;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@media(max-width: 450px){
+  .login{
+    background-color: white;
+    background-size: cover;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-content: center;
+  }
 }
 
 @media(min-width: 750px){
   .login-form {
     background-color: #E7E7E7;;
     width: 400px;
-    height: 350px;
+    min-height: 350px;
     border: solid 1px black;
     border-radius: 10px;
     display: flex;
@@ -26,7 +41,7 @@
   .login-form {
     background-color: #E7E7E7;;
     width: 400px;
-    height: 300px;
+    min-height: 300px;
     border: solid 1px black;
     border-radius: 10px;
     display: block;
