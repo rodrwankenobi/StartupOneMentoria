@@ -1,40 +1,30 @@
-
-header{
-
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    justify-content: space-between;
-    background-color:white;
+ul li a{
+    text-decoration: none;
 }
 
-header div {
-    display: flex;
-    justify-items:center;
-    align-self: center;
+.img-logo{
+    margin-right: 30px;
 }
 
-header nav {
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.opcoes-menu {
     display: flex;
+    flex-direction: column;
     align-content: center;
 }
 
-header nav ul {
-    display: flex;
-    align-content: center;
-
-}
-
-header nav ul li {
+.opcao-menu{
     list-style-type: none;
     padding: 10px;
     height: 20%;
-    display: flex;
+
     align-content: center;
     border-bottom: 5px solid transparent;
 }
-
-
 
 @media(max-width: 600px){
     .brand {
@@ -55,6 +45,7 @@ a {
     color: black;
 }
 
+
 ul a:hover {
     text-decoration: none;
     color: black;
@@ -69,5 +60,13 @@ ul a{
 }
 
 nav {
-    padding-right: 5px;
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.brand{
+    justify-content: space-evenly;
+    gap: 1px;
 }

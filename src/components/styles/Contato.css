@@ -5,8 +5,10 @@
     justify-content:space-around;
     align-content: space-around;
 }
+
 .contact-form{
-    width: 300px;
+    min-width: 400px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     text-align: center;

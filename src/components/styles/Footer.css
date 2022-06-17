@@ -1,9 +1,11 @@
 footer{
+    width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
-    justify-content:space-around;
+    justify-content:space-evenly;
+    gap: 50px;
 }
 
 footer div{

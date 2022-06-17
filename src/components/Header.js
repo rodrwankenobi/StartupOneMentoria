@@ -1,45 +1,52 @@
 import logo from '../mentoria.jpg'
 import './styles/Header.css'
 
-function Header(){
+function ItensMenu(){
     return (
-        <header>
+        <ul class="navbar-nav mr-auto">
+            <li class="opcao-menu">
+            <a href="/mentores" class="nav-link">
+                    Encontre um Mentor
+            </a>
+            </li>
+            <li class="opcao-menu">
+            <a href="/" class="nav-link">
+                    Trilhas de Aprendizado
+            </a>
+            </li>
+            <li class="opcao-menu">
+            <a href="/paraempresas" class="nav-link">
+                    Para Empresas
+            </a>
+            </li>
+            <li class="opcao-menu">
+            <a href="/contato" class="nav-link">
+                    Contato
+            </a>
+            </li>
+            <li class="opcao-menu">
+            <a href="/about" class="nav-link">
+                    Sobre Nós
+            </a>
+            </li>
+        </ul>
+    )
+}
+
+function Header(){
+    return(
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="brand">
-                <img src={logo}/>
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <a href="/mentores">
-                        <li>
-                                Encontre um Mentor
-                        </li>
-                        </a>
-                        <a href="/">
-                        <li>
-                                Trilhas de Aprendizado
-                        </li>
-                        </a>
-                        <a href="/paraempresas">
-                        <li>
-                                Para Empresas
-                        </li>
-                        </a>
-                        <a href="/contato">
-                        <li>
-                                Contato
-                        </li>
-                        </a>
-                        <a href="/about">
-                        <li>
-                                Sobre Nós
-                        </li>
-                        </a>
-                    </ul>
-                </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                    <img class="img-logo" src={logo}/>
             </div>
 
-        </header>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ItensMenu />
+            </div>
+        </nav>
     )
 }
 
