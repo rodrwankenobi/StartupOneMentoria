@@ -22,11 +22,22 @@ function Login() {
             Username: email,
             Password: password
         };
+        const setWithExpiry = (key, value, ttl) => {
+            const now = new Date()
+        
+            // `item` is an object which contains the original value
+            // as well as the time when it's supposed to expire
+            const item = {
+                value: value,
+                expiry: now.getTime() + ttl,
+            }
+            localStorage.setItem(key, JSON.stringify(item))
+        }
         var authenticationDetails = new AuthenticationDetails( authenticationData );
 
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: result => {
-                localStorage.setItem('isAuthenticated',true);
+                setWithExpiry('isAuthenticated',true,5000   );
                 window.location.href = "/";
             },
             onFailure: err => {

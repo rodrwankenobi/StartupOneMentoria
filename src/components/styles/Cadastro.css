@@ -1,7 +1,7 @@
-.button-cadastro {
+  .button-cadastro {
     background: #00B050;
     color: white;
-    width: 70%;
+    width: 200px;
     height: 30px;
     margin: 20px;
     border-radius: 5px;
@@ -12,27 +12,27 @@
     border-radius: 5px;
     height: 30px;
     width: 200px;
-    margin-top: 10px;
   }
-
+  .input-cadastro-telefone {
+    border-radius: 50px;
+    height: 30px;
+    width: 200px;
+    justify-self:center;
+  }
 
   .controle-cadastro {
     display: grid;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 300px;
+    grid-template-columns: 2fr 2fr;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin: 10px;
   }
 
   .select-cadastro {
-    width: 210px;
-    height: 30px;
-    margin-top: 10px;
-    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
   }
 
-  .label-cadastro {
-    justify-self: right;
-  }
   .cadastro {
     width: 100vw;
     display: flex;
@@ -40,21 +40,46 @@
     justify-content: center;
     align-content: center;
     background-color: #E7E7E7;
-    border-radius: 5px;
+    align-self:center;
   }
   .submit {
     text-align: center;
-    width: 300px;
-  }
-  div .label-cadastro{
-    text-align: right;
+    width: 100vw;
   }
 
-  h1 {
-    display: flex;
-    justify-content: center;
-  }
   .logo {
+    width: 100vw;
     text-align: center;
     display: block;
+  }
+
+  .titulo-cadastro {
+    width: 100vw;
+    text-align:center;
+  }
+
+  .label-cadastro{
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-around;
+    margin-right: 10px;
+  }
+
+  .password-validation{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-self:center;
+    text-align: center;
+  }
+  .password-validation li{
+    width: 300px;
+    text-align: left;
+    margin: auto;
+    padding-left: 20px;  
+  }
+
+  .align-validation{
+    display: flex;
+    justify-content: space-around;
   }
