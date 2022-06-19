@@ -49,6 +49,7 @@ function Cadastro(){
             }
             var cognitoUser = result.user;
             alert('Usuário ' + cognitoUser.getUsername() + ' cadastrado com sucesso!');
+            window.location.href="/login"
         });
 
     }
