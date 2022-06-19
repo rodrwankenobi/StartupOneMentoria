@@ -38,7 +38,7 @@ function Login() {
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: result => {
                 alert("Login realizado com sucesso");
-                setWithExpiry('isAuthenticated',true,5000);
+                setWithExpiry('isAuthenticated',true,1800000);
                 window.location.href = "/";
             },
             onFailure: err => {
