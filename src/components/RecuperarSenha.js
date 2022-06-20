@@ -91,7 +91,7 @@ function RecuperarSenha(){
                                 <label for="senha" class="input-recuperacao" >Nova Senha:</label>
                             </div>
                             <div>      
-                                <input type="text" value={senha} name="senha" class="input-recuperacao" onChange={e => setSenha(e.target.value)}/>
+                                <input type="password" value={senha} name="senha" class="input-recuperacao" onChange={e => setSenha(e.target.value)}/>
                             </div>
                         </div>
                         <div class="controle-recuperacao">
@@ -99,7 +99,7 @@ function RecuperarSenha(){
                                 <label for="confirmar-senha" class="input-recuperacao" >Confirme a Nova Senha:</label>
                             </div>
                             <div>      
-                                <input type="text" value={confirmarSenha} name="confirmar-senha" class="input-recuperacao" onChange={e => setConfirmarSenha(e.target.value)}/>
+                                <input type="password" value={confirmarSenha} name="confirmar-senha" class="input-recuperacao" onChange={e => setConfirmarSenha(e.target.value)}/>
                             </div>
                         </div>
                         <div class="submit">
