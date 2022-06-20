@@ -28,7 +28,8 @@
     font-weight: bold;
   }
 .controle-recuperacao{
-    display: flex;
+    display: grid;
+    grid-template-columns:2fr, 2fr;
     justify-content: center;
     text-align: center;
     margin: 30px;

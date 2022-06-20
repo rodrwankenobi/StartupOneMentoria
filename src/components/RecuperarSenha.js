@@ -8,6 +8,8 @@ function RecuperarSenha(){
     const [email,setEmail] = useState();
     const [verificationState, setVerificationState] = useState(1);
     const [verificationCode, setVerificationCode] = useState();
+    const [senha, setSenha] = useState();
+    const [confirmarSenha,setConfirmarSenha] = useState();
 
     const enviarCodigo = (event,email) => {
         event.preventDefault();
@@ -16,7 +18,8 @@ function RecuperarSenha(){
             Username: email.toLowerCase(),
             Pool: UserPool
         });
-    
+        setVerificationState(2);
+
         // call forgotPassword on cognitoUser
         cognitoUser.forgotPassword({
             onSuccess: function(result) {
@@ -26,14 +29,31 @@ function RecuperarSenha(){
             onFailure: function(err) {
                 alert(`Erro ao recuperar o usuário ${email} - ${err}`);
             },
-            inputVerificationCode() { // this is optional, and likely won't be implemented as in AWS's example (i.e, prompt to get info)
-                var verificationCode = prompt('Insira o seu código de recuperação: ', '');
-                var newPassword = prompt('Insira a sua nova senha: ', '');
-                cognitoUser.confirmPassword(verificationCode, newPassword, this);
-            }
         });
     }
-    const validarCodigo = () => {console.log('do nothing')}
+    const validarCodigo = (event,email) => {
+        event.preventDefault();
+        if(senha != confirmarSenha) {
+            alert("A senha e a confirmação estão diferentes.")
+            return
+        }
+        const cognitoUser = new CognitoUser({
+            Username: email.toLowerCase(),
+            Pool: UserPool
+        });
+
+        cognitoUser.forgotPassword(
+                {
+                    onSuccess: (data) => {
+                        alert("Senha alterada com sucesso!");
+                        window.location.href = "/login";
+                    },
+                    onFailure: (err) => {
+                        alert(`Erro na alteração da Senha ${err}`)
+                    },
+            }
+        );
+    }
     return (
         <>  
             <div class="recuperacao">
@@ -64,6 +84,22 @@ function RecuperarSenha(){
                             </div>
                             <div>      
                                 <input type="text" value={verificationCode} name="verification-code" class="input-recuperacao" onChange={e => setVerificationCode(e.target.value)}/>
+                            </div>
+                        </div>
+                        <div class="controle-recuperacao">
+                            <div>      
+                                <label for="senha" class="input-recuperacao" >Nova Senha:</label>
+                            </div>
+                            <div>      
+                                <input type="text" value={senha} name="senha" class="input-recuperacao" onChange={e => setSenha(e.target.value)}/>
+                            </div>
+                        </div>
+                        <div class="controle-recuperacao">
+                            <div>      
+                                <label for="confirmar-senha" class="input-recuperacao" >Confirme a Nova Senha:</label>
+                            </div>
+                            <div>      
+                                <input type="text" value={confirmarSenha} name="confirmar-senha" class="input-recuperacao" onChange={e => setConfirmarSenha(e.target.value)}/>
                             </div>
                         </div>
                         <div class="submit">

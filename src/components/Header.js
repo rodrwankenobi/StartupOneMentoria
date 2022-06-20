@@ -2,6 +2,9 @@ import logo from '../mentoria.jpg'
 import './styles/Header.css'
 
 function ItensMenu(){
+    const logout = () => {
+        localStorage.setItem("isAuthenticated",false);
+    }
     return (
         <ul class="navbar-nav mr-auto">
             <li class="opcao-menu">
@@ -27,6 +30,11 @@ function ItensMenu(){
             <li class="opcao-menu">
             <a href="/about" class="nav-link">
                     Sobre Nós
+            </a>
+            </li>
+            <li class="opcao-menu">
+            <a onClick={logout} href="/login" class="nav-link">
+                    Sair
             </a>
             </li>
         </ul>
