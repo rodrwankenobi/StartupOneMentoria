@@ -1,0 +1,40 @@
+.recuperacao{
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-recuperacao {
+    margin: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.img-recuperacao{
+    align-self: center;
+    margin: 30px;
+}
+.button-recuperacao {
+    background: #00B050;
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+.controle-recuperacao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.input-recuperacao {
+    border-radius: 5px;
+    margin-left: 10px;
+}
